@@ -5,13 +5,13 @@ const _ = require("lodash");
 let count = 0;
 
 function updateCounter() {
-  count++;
-  $( "#count" ).text(`${count} clicks on the button` );
+    count++;
+    $( "#count" ).text(`${count} clicks on the button` );
 }
 
 const $button = $("<button>Click here to get started</button>").on(
-  "click",
-  _.debounce( updateCounter, 500, { leading: true, trailing: false })
+    "click",
+    _.debounce( updateCounter, 500, { leading: true, trailing: false })
 );
 
 $('body').append("<p>Holberton Dashboard</p>");
