@@ -5,11 +5,11 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './js/dashboard_main.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
-    clean: true, // Clean the /public folder before each build
+    clean: true,
   },
   mode: 'production',
   module: {
@@ -29,7 +29,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './public/index.html',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
@@ -49,5 +49,9 @@ module.exports = {
       '...',
       new CssMinimizerPlugin(),
     ],
+  },
+  performance: {
+    hints: false,
+    maxAssetSize: 250000, // Adjust the size limit to avoid the asset size limit warning
   },
 };
