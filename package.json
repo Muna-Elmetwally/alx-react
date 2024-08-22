@@ -2,7 +2,7 @@
   "devDependencies": {
     "gh-pages": "^6.1.1"
   },
-  "homepage":"http://Muna-Elmetwally.github.io/alx-react",
+  "homepage":"http://Muna-Elmetwally.github.io/alx-react/0x01-react_intro",
   "scripts": {
             "start": "react-scripts start",
             "build": "react-scripts build",
