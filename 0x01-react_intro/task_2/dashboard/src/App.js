@@ -1,4 +1,4 @@
-import logo from './';
+import logo from './Holberton Logo.jpg';
 import './App.css';
 import { getFooterCopy, getFullYear } from './utils';
 
